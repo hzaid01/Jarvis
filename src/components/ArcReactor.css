@@ -1,0 +1,93 @@
+.arc-reactor-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
+}
+
+.arc-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.arc-outer {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid var(--hud-cyan);
+  border-bottom: 2px solid var(--hud-cyan);
+  border-left: 2px dotted var(--hud-cyan);
+  border-right: 2px dotted var(--hud-cyan);
+  animation: spinOuter 10s linear infinite;
+  opacity: 0.8;
+}
+
+.arc-middle {
+  width: 75%;
+  height: 75%;
+  border-left: 2px dashed var(--hud-cyan);
+  border-right: 2px dashed var(--hud-cyan);
+  animation: spinMiddle 6s linear infinite reverse;
+  opacity: 0.6;
+}
+
+.arc-inner {
+  width: 50%;
+  height: 50%;
+  border: 2px dotted var(--hud-cyan);
+  animation: spinInner 3s linear infinite;
+}
+
+.arc-core {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: var(--hud-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px var(--hud-cyan);
+  animation: corePulse 2s ease-in-out infinite;
+}
+
+/* Streaming state enhances the animations */
+.arc-reactor-container.streaming .arc-outer {
+  animation-duration: 3s;
+  border-color: #fff;
+}
+.arc-reactor-container.streaming .arc-middle {
+  animation-duration: 1.5s;
+  border-color: #fff;
+}
+.arc-reactor-container.streaming .arc-inner {
+  animation-duration: 0.8s;
+  border-color: #fff;
+}
+.arc-reactor-container.streaming .arc-core {
+  background: #fff;
+  box-shadow: 0 0 25px 10px #fff;
+  animation-duration: 0.5s;
+}
+
+@keyframes spinOuter {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinMiddle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinInner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes corePulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "jarvis",
+  "version": "1.0.0",
+  "description": "JARVIS — Iron Man HUD AI Assistant",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently -n vite,electron \"vite\" \"npx wait-on http://localhost:5173 && npx electron .\"",
+    "dev:vite": "vite",
+    "dev:electron": "npx wait-on http://localhost:5173 && npx electron .",
+    "electron": "electron .",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "systeminformation": "^5.22.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "electron": "^33.3.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.11",
+    "wait-on": "^8.0.3"
+  }
+}
