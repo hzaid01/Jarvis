@@ -357,30 +357,6 @@ This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) 
 
 ---
 
-## 🎯 Roadmap
-
-### MVP (Current)
-- ✅ HUD Dashboard UI
-- ✅ Chat Interface
-- ✅ System Stats Monitoring
-- ✅ Voice Input/Output
-- ✅ Activity Log
-
-### Phase 2
-- [ ] Memory/Conversation History
-- [ ] Advanced System Control
-- [ ] Plugin System
-- [ ] Cloud Sync (optional)
-- [ ] Multi-language Support
-
-### Phase 3
-- [ ] Mobile Companion App
-- [ ] Web Dashboard
-- [ ] Advanced Analytics
-- [ ] Custom Voice Models
-
----
-
 ## ⚠️ Disclaimer
 
 JARVIS is a personal AI assistant project inspired by the Iron Man movies. It's designed for local use on Windows 11. All AI processing happens locally — your data never leaves your machine.
